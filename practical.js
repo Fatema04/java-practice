@@ -21,3 +21,10 @@ var avarage = totalMarks / 4;
 var avarageTwoDecimal = avarage.toFixed(2);
 
 console.log(avarageTwoDecimal);
+
+
+// 
+var i = 5;
+for (i = 0; i < 5; i++) {
+    console.log(i);
+}
