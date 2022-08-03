@@ -17,13 +17,13 @@ console.log(properties);
 var propertyValues = Object.values(myDress);
 console.log(propertyValues);
 
-/*var friends = ["type", "color", "length", "design", "price"];
+var friends = ["type", "color", "length", "design", "price"];
 for (var i = 0; i < properties.length; i++) {
     var allProperty = properties[i];
     var allPropertyValues = myDress[allProperty];
     console.log(allProperty, allPropertyValues);
 
-}*/
+}
 
 //fr in loop
 
