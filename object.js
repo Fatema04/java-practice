@@ -11,3 +11,8 @@ console.log(myDress.design);
 // if want to change value
 /*myDress.color = 'green';
  */
+var dressPrice = myDress.price;
+var dressPrice1 = myDress['price'];
+
+console.log(dressPrice);
+console.log(dressPrice1);
