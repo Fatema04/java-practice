@@ -32,12 +32,12 @@
 
 
 // make array mobole then while loop
+var mobile = ['samsung', 'mi phone']
+while (mobile.length < 10) {
+    console.log(mobile);
+    mobile++;
+}
 
-// var myMobile = 0;
-// while (myMobile < 4) {
-//     console.log('samsung', 'honor-lite', 'mi-phone');
-//     myMobile++;
-// }
 // for loop 30 to 86 & break 44
 
 // for (var i = 30; i <= 86; i++) {
