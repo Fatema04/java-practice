@@ -18,9 +18,9 @@ sum(15, 12, 4);
 //example 3
 
 function math(a, b, c, d) {
-    console.log(a, b, c, d);
+    console.log('have to add : ', a, b, c, d);
     var math = (a + b + c) / d;
-    console.log(math);
+    console.log('the output is : ', math);
 
 }
 
