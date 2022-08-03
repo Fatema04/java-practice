@@ -1,3 +1,42 @@
+
+/*১. জাভাস্ক্রিপ্ট কি জিনিস এইটা কি জানো?
+
+JavaScript is the Programming Language for the Web.
+
+২. জাভাস্ক্রিপ্ট কিভাবে কাজ করে সেটা কি জানো?
+
+৩. ভেরিয়েবল কি জিনিস?
+ Vary+able (liable to change)
+
+ ৪. ভেরিয়েবল কিভাবে ডিক্লেয়ার করে?
+  Need 5 things 
+  1)var
+  2)names
+  3)=
+  4)attribute
+  5);
+example: var age = 45 ;
+
+৭. জাভাস্ক্রিপ এ primitive and non primitive data types কি কি ? উদাহরণ হিসেবে বলো। 
+Primitive data type : number,string,null,undefiend,boolean
+non-primitive data type : object, array , function
+
+ভেরিয়েবল এর নাম কিভাবে কিভাবে ডিক্লেয়ার করতে হয়। কোন কোন জিনিস নাম এ লেখা যাবে না। অর্থাৎ Variable এর naming convention সম্পর্কে বলো। 
+
+
+
+
+
+
+
+*/
+
+//৫. ভেরিয়েবল এর মান কিভাবে চেইঞ্জ করে বা আপডেট করে। 
+
+var age = 45;
+age = 35;
+console.log(age);
+
 //  আসকে আমার মন ভালো নেই এই কথা ৩৯ বার আউটপুট  হিসেবে দেখাও। 
 
 var mood = 0;
