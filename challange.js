@@ -40,14 +40,44 @@
 // }
 // for loop 30 to 86 & break 44
 
-for (var i = 30; i <= 86; i++) {
+// for (var i = 30; i <= 86; i++) {
 
-
-    console.log(i);
-    if (i === 44) {
-        break;
-    }
-}
+//     console.log(i);
+//     if (i === 44) {
+//         break;
+//     }
+// }
 
 
 // array book price more then 200
+// var bookPrice = [145, 345, 72, 456, , 500, 432, 189, 230];
+// for (var i = 0; i < bookPrice.length; i++) {
+//     var book = bookPrice[i];
+//     if (book > 200) {
+//         console.log(book);
+//     }
+// }
+// amar kache  x tk ache, 80k ..mac, 40k..lenovo com,20k ..old lap..otherwise old phone
+
+// var myBudget = 75000;
+// var macPrice = 80000;
+// var lenovoComputerPrice = 40000;
+// var oldLaptopPrice = 20000;
+
+// if (myBudget > macPrice) {
+
+//     console.log('buy a mac');
+// }
+// else if (myBudget > lenovoComputerPrice) {
+
+//     console.log('buy a lenovo computer');
+// }
+// else if (myBudget > oldLaptopPrice) {
+//     console.log('buy a old laptop');
+// }
+// else {
+//     console.log('continue with mobile');
+// }
+
+
+
