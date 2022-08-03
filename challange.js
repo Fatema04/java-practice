@@ -17,13 +17,32 @@ JavaScript is the Programming Language for the Web.
   5);
 example: var age = 45 ;
 
+৬. কি কি ধরণের ভেরিয়েবল হয়। সেগুলা কি কি (হিন্টস: Numeric, String, Boolean)
+ Numeric = 1,2,33,4,.
+ String = 'WATER','AIR'
+ Boolean = true , false.
+
+
 ৭. জাভাস্ক্রিপ এ primitive and non primitive data types কি কি ? উদাহরণ হিসেবে বলো। 
 Primitive data type : number,string,null,undefiend,boolean
 non-primitive data type : object, array , function
 
-ভেরিয়েবল এর নাম কিভাবে কিভাবে ডিক্লেয়ার করতে হয়। কোন কোন জিনিস নাম এ লেখা যাবে না। অর্থাৎ Variable এর naming convention সম্পর্কে বলো। 
+৮. ভেরিয়েবল এর নাম কিভাবে কিভাবে ডিক্লেয়ার করতে হয়। কোন কোন জিনিস নাম এ লেখা যাবে না। অর্থাৎ Variable এর naming convention সম্পর্কে বলো। 
 
+1)can't use $ _
+2)can't use reserved word like name,var,close 
+3)can't use number at first like 1person--X
+4)use Alphabet at first like person1 
+5)can't use string data type "person1"
+6) use meaning full word
 
+৯.দুইটা ভেরিয়েবল এর মধ্যে =, -, *, /, % কিভাবে করে? 
+
+(=)----  {equal operator}        Express value of something         [temperature = 30 deg]
+(-)----  {subtraction operator}  Subtracing one value from another  [30-20=10]
+(+)----  {addition operator}     adding two values                  [20+20=40]
+(*)----  {multiplication opt}    multiple two values                [5*3=15]
+(/)----  {division operator}     divide values                      [15/3=5] 
 
 
 
