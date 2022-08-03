@@ -12,17 +12,3 @@ console.log(myDress.design);
 /*myDress.color = 'green';
  */
 
-//find object value type 1
-var dressPrice = myDress.price;
-console.log(dressPrice);
-
-//find object value type 2
-var dressPrice1 = myDress['price'];
-console.log(dressPrice1);
-
-
-//find object value type 3
-
-var propertyName = 'type';
-var propertyValue = myDress['type'];
-console.log(propertyName, propertyValue);
