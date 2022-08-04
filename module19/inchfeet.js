@@ -12,3 +12,15 @@ function mileToKm(miles) {
 }
 var result1 = mileToKm(90);
 console.log(result1);
+
+//even odd
+function evenodd(number) {
+    if (number % 2 === 0) {
+        console.log("Yes, its true");
+    }
+    else {
+        console.log("No, its false");
+    }
+
+}
+evenodd(5);
