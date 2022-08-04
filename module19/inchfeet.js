@@ -38,3 +38,19 @@ function leapYear(number) {
 }
 leapYear(1952);
 leapYear(1997);
+
+//oddsum
+
+function oddSum(numbers) {
+    let sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        sum = sum + element;
+        console.log(sum);
+    }
+    return sum;
+
+}
+const myNumbers = [34, 85, 87, 63, 12]
+oddSum(myNumbers);
