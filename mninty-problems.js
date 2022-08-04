@@ -101,11 +101,39 @@ console.log(last);
 “bar”. Call function bar() in the foo() function after printing. What will be the output? Now call
 the foo() to see the output.*/
 
+
+
+
 /*2) Write a function called make_avg() which will take an three integers and return the
 average of those values.*/
 
+function getAverage(age1, age2, age3) {
+
+    var total = age1 + age2 + age3;
+    var avarage = total / 3;
+    return avarage;
+
+}
+var age1 = 50;
+var age2 = 40;
+var age3 = 60;
+
+var myAvarage = getAverage(age1, age2, age3)
+console.log(myAvarage);
+
 /**3)Write a function called make_avg() which will take an array of integers and
 the size of that array and return the average of those values. */
+
+function avarage(intarray) {
+    console.log(intarray);
+    var sum = intarray[0] + intarray[1] + intarray[2];
+    var get_avarage = sum / 3;
+    console.log(get_avarage);
+}
+var intarray = [100, 40, 60];
+avarage(intarray);
+
+
 
 /**
  * Write a function called odd_even() which takes an integer value and tells whether this
@@ -113,3 +141,19 @@ value is even or odd. You need to do it in 4 ways:
 ● Has return + Has parameter
 ● No return + Has parameter
  */
+
+function evenodd(num) {
+
+    if (num % 2 == 0) {
+        console.log("even");
+    }
+
+    else { console.log("odd") }
+
+
+}
+
+evenodd(5);
+
+
+
