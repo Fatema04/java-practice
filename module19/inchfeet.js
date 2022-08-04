@@ -24,3 +24,17 @@ function evenodd(number) {
 
 }
 evenodd(5);
+
+//findyear
+
+function leapYear(number) {
+    if (number % 4 === 0) {
+        console.log("Yes, its a leap-year");
+    }
+    else {
+        console.log("No, its not a leap-year");
+    }
+
+}
+leapYear(1952);
+leapYear(1997);
