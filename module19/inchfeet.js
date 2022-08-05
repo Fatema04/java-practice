@@ -39,9 +39,9 @@ function leapYear(number) {
 leapYear(1952);
 leapYear(1997);
 
-//oddsum
+//sum of array
 
-function oddSum(numbers) {
+function sumOfArray(numbers) {
     let sum = 0;
     for (var i = 0; i < numbers.length; i++) {
         const index = i;
@@ -53,4 +53,39 @@ function oddSum(numbers) {
 
 }
 const myNumbers = [34, 85, 87, 63, 12]
-oddSum(myNumbers);
+sumOfArray(myNumbers);
+
+//oddsum
+function intArray(numbers) {
+    let sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        sum = sum + element;
+        console.log(sum);
+    }
+    return sum;
+
+}
+
+function getOdd(numbers) {
+    const oddNumber = [];
+    for (let i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[i];
+        if (element % 2 !== 0) {
+            //console.log(index, element);
+            oddNumber.push(element);
+        }
+    }
+    return oddNumber
+}
+const myNumbers1 = [44, 75, 57, 63, 18]
+
+const oddNumber = getOdd(myNumbers1);
+console.log(oddNumber);
+
+const sumOfOdd = intArray(oddNumber);
+console.log(sumOfOdd);
+
+
