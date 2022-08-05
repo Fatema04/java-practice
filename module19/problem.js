@@ -50,10 +50,11 @@ console.log(result1);
 নতুন অ্যারে, নতুন অ্যারে ফিরিয়ে দিন এবং ফলাফল প্রিন্ট করুন।*/
 
 function findLeapYear(years) {
+    console.log(years);
     const arrayOfLeapYear = [];
     for (var i = 0; i < years.length; i++) {
         const index = i;
-        const element = index[i];
+        const element = years[index];
         if (element % 4 === 0) {
             arrayOfLeapYear.push(element);
         }
@@ -68,3 +69,35 @@ console.log(arrayOfLeapYear);
  * একটি ফাংশন findOddSum() লিখুন যা অ্যারে [5, 7, 8, 10, 45, 30] নেবে।
 ইনপুট প্যারামিটার হিসাবে এবং বিজোড় সংখ্যার যোগফল প্রদান করবে।
  */
+
+function findOdd(numbers) {
+
+    const arrayOdd = [];
+    for (var i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        if (element % 2 !== 0) {
+            arrayOdd.push(element)
+        }
+    }
+    return arrayOdd;
+}
+
+function sumOfOdd(num) {
+    let sum = 0;
+    for (var i = 0; i < num.length; i++) {
+        const index = i;
+        const element = num[index];
+        sum = sum + element;
+    }
+    return sum;
+}
+
+let allNumbers = [5, 7, 8, 10, 45, 30];
+
+var arrayOdd = findOdd(allNumbers);
+console.log(arrayOdd);
+
+var add = sumOfOdd(arrayOdd);
+console.log(add);
+

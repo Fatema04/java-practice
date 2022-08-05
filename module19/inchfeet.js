@@ -55,18 +55,7 @@ function sumOfArray(numbers) {
 const myNumbers = [34, 85, 87, 63, 12]
 sumOfArray(myNumbers);
 
-//oddsum
-function intArray(numbers) {
-    let sum = 0;
-    for (var i = 0; i < numbers.length; i++) {
-        const index = i;
-        const element = numbers[index];
-        sum = sum + element;
-        console.log(sum);
-    }
-    //return sum;
-
-}
+//sum of odd
 
 function getOdd(numbers) {
     const oddNumber = [];
@@ -74,19 +63,33 @@ function getOdd(numbers) {
         const index = i;
         const element = numbers[i];
         if (element % 2 !== 0) {
-            //console.log(index, element);
             oddNumber.push(element);
         }
     }
     return oddNumber
 }
+
+function sumOfArray(numbers) {
+    let sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        sum = sum + element;
+
+    }
+    return sum;
+
+}
+
+
 const myNumbers1 = [44, 75, 57, 63, 18]
 
 const oddNumber = getOdd(myNumbers1);
 console.log(oddNumber);
 
-const sumOfOdd = intArray(oddNumber);
-console.log(sum);
+const sumOfOdd = sumOfArray(oddNumber);
+console.log(sumOfOdd);
+
 
 //add number(1+2+3+4+5)
 function addition(numberr) {
@@ -94,11 +97,11 @@ function addition(numberr) {
     for (var i = 1; i <= numberr; i++) {
 
         summ = summ + i;
-        console.log(summ);
+        console.log(i, summ);
     }
     return summ;
 }
-addition(3);
+addition(7);
 
 
 //multiplication 
