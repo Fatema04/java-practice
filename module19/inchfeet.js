@@ -88,4 +88,30 @@ console.log(oddNumber);
 const sumOfOdd = intArray(oddNumber);
 console.log(sumOfOdd);
 
+//add number(1+2+3+4+5)
+function addition(numberr) {
+    let summ = 0;
+    for (var i = 1; i <= numberr; i++) {
+
+        summ = summ + i;
+        console.log(summ);
+    }
+    return summ;
+}
+var res = addition(3);
+console.log(res);
+
+//multiplication 
+
+function multiplication(numberr) {
+    let multiple = 1;
+    for (var i = 1; i <= numberr; i++) {
+
+        multiple = multiple * i;
+        console.log(i, multiple);
+    }
+    return multiple;
+}
+var resultt = multiplication(3);
+console.log(resultt);
 
