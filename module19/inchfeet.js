@@ -64,7 +64,7 @@ function intArray(numbers) {
         sum = sum + element;
         console.log(sum);
     }
-    return sum;
+    //return sum;
 
 }
 
@@ -86,7 +86,7 @@ const oddNumber = getOdd(myNumbers1);
 console.log(oddNumber);
 
 const sumOfOdd = intArray(oddNumber);
-console.log(sumOfOdd);
+console.log(sum);
 
 //add number(1+2+3+4+5)
 function addition(numberr) {
@@ -98,8 +98,8 @@ function addition(numberr) {
     }
     return summ;
 }
-var res = addition(3);
-console.log(res);
+addition(3);
+
 
 //multiplication 
 
@@ -112,6 +112,6 @@ function multiplication(numberr) {
     }
     return multiple;
 }
-var resultt = multiplication(3);
-console.log(resultt);
+multiplication(3);
+
 
