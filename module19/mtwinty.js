@@ -120,3 +120,4 @@ console.log(one, two, three);
 
 
 
+Math.floor(13.67);
