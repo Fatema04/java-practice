@@ -226,16 +226,54 @@ while (oddNumbers < 20) {
 
 let rollNumber = [20, 34, 45, 24, 31, 24];
 
-console.log(rollNumber.length);
+//console.log(rollNumber.length);
+//
+//
+//rollNumber[3] = 100;
+//console.log(rollNumber)
+//
+//
+//rollNumber.push(50, 60);
+//console.log(rollNumber)
+//
+//
+//rollNumber.pop();
+//console.log(rollNumber)
 
+//৯. তুমি কি একটা ফর লুপ দিয়ে কোন একটা array এর সবগুলা উপাদানকে দেখাতে পারবে। সেটা রেগুলার for লুপ হোক বা for of হোক। হলে সেই স্টাইলে একটা কোড লিখে ফেলো। 
 
-rollNumber[3] = 100;
-console.log(rollNumber)
+let members = ['ayan', 'jain', 'maya', 'esha'];
+for (let i = 0; i < members.length; i++) {
+    let index = i;
+    let member = members[index];
+    console.log(member);
+}
 
+//১০. তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো 
 
-rollNumber.push(50, 60);
-console.log(rollNumber)
+const num = [70, 56, 90, 87, 80, 33, 54, 97];
 
+for (let i = 0; i < num.length; i++) {
+    let index = i;
+    let nums = num[index];
+    if (nums >= 80) {
+        console.log(nums)
+    }
+}
 
-rollNumber.pop();
-console.log(rollNumber)
+//১১. তিনটা সংখ্যার গুনফল বের করে ফাইনাল রেজাল্ট আউটপুট হিসেবে রিটার্ন করতে হবে। তুমি কি সেই কোড লিখতে পারবে। যদি পারো তাহলে সেই কোড লিখে ফেলো। 
+
+let numb1 = 13;
+let numb2 = 25;
+let numb3 = 10;
+
+let multipal = (numb1 * numb2 * numb3);
+console.log(multipal);
+
+//১২. একটা অবজেক্ট ডিক্লেয়ার করবে। সেটাতে তিনটা প্রপার্টি থাকবে। এবং কোন একটা প্রোপার্টি এর মান চেইঞ্জ করবা। 
+
+let phone = { brand: 'oppo', color: 'green', price: 25000 }
+
+phone.price = 20000;
+console.log(phone);
+
