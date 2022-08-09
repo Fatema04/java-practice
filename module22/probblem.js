@@ -4,7 +4,7 @@ function feetToInch(number) {
     let getInch = number * 12;
     return getInch;
 }
-let getInch = feetToInch(5);
+let getInch = feetToInch(6);
 console.log(getInch);
 
 
@@ -18,9 +18,8 @@ function centimeterToMeter(number1) {
     let getMeter = number1 / 100;
     return getMeter;
 }
-let getMeter = centimeterToMeter(500);
-console.log(getMeter);
-
+let getMeter = centimeterToMeter(700);
+console.log(getMeter)
 
 
 
@@ -40,7 +39,24 @@ console.log(getMeter);
 
 উত্তর হিসেবে সংখ্যা রিটার্ন করবে। */
 
+function paperRequirements(copyOf1stBook, copyOf2ndBook, copyOf3rdBook) {
 
+    let pageOf1stBook = 100;
+    let pageOf2ndBook = 200;
+    let pageOf3rdBook = 300;
+
+    let totalPageOf1stBook = copyOf1stBook * pageOf1stBook;
+    let totalPageOf2ndBook = copyOf2ndBook * pageOf2ndBook;
+    let totalPageOf3rdBook = copyOf3rdBook * pageOf3rdBook;
+
+    let totalPaperRequirment = totalPageOf1stBook + totalPageOf2ndBook + totalPageOf3rdBook;
+
+    return totalPaperRequirment;
+
+}
+
+const totalPaperRequirment = paperRequirements(4, 5, 3);
+console.log(totalPaperRequirment);
 
 
 
@@ -51,7 +67,7 @@ function bestFriend(names) {
     for (let i = 0; i < friends.length; i++) {
         const index = i;
         const element = names[index];
-        if (element < myBestFriend) {
+        if (element.length > myBestFriend.length) {
             myBestFriend = element
         }
     }
@@ -79,6 +95,48 @@ function findPositive(numbers) {
     }
     return allPositive;
 }
-const allNumbers = [0, 1, -5, -3, 5, 7, 2, -9];
+const allNumbers = [0, 1, -5, -3, 5, 7, 2, -9, -12, 12];
 let allPositive = findPositive(allNumbers);
 console.log(allPositive);
+
+
+//----------------বেসিক কনসেপ্ট চেকলিস্ট/সেলফ এসেসমেন্ট: -----------------
+
+//১. তোমাকে যদি বলি একটা স্ট্রিং টাইপের ভেরিয়েবল লিখো। একটা বুলিয়ান টাইপের ভেরিয়েবল লিখো বা একটা নাম্বার টাইপের ভেরিয়েবল লিখো। সেটা কি তুমি লিখতে পারবে? 
+
+let myName = 'Fatema Summenur';
+let isHappy = true;
+
+//২. তুমি কি জানো কখন let দিয়ে ভেরিয়েবল লিখতে হয়ে আর কখন const দিয়ে ভেরিয়েবল লিখতে হয়। যদি লিখতে পারো তাহলে লিখে ফেলো। এবং যেই যেটা দিয়ে ভেরিয়েবল লিখলে আবার সেটা চেইঞ্জ করা যায়। তাহলে যেটা দিয়ে ভেরিয়েবল ডিক্লেয়ার করলে চেইঞ্জ করা যায়। সেটার মান চেইঞ্জ করে নাও । অর্থাৎ জাস্ট দুইটা ভেরিয়েবল ডিক্লেয়ার করবে let এবং const দিয়ে। তারপর যেকোন একটার ভ্যালু চেইঞ্জ করবে।
+
+
+//let 
+let age = 22;
+age = 23;
+console.log(age);
+
+//const
+//const age1 = 22;
+//age1 = 23;
+//console.log(age1);//unchangeable
+
+//৩. দুইটা ভেরিয়েবল এর মধ্যে যোগ, বিয়োগ, গুণ, ভাগ কিভাবে করতে হয় সেটা কি জানো। অর্থাৎ তুমি কি +, -, *, /, %এইগুলার ব্যবহার জানো। তাহলে নাম্বার টাইপের দুইটা ভেরিয়েবল লিখো তারপর তাদের যোগ করে সেটার মান আরেকটা ভেরিয়েবল এ রাখো। একইভাবে ওই দুইটা ভেরিয়েবল এর মধ্যে বিয়োগ, গুন, ভাগ এবং ভাগশেষ বের করো। 
+
+let num1 = 16;
+let num2 = 4;
+
+//addition
+let add = (num1 + num2);
+console.log(add);
+
+//subtraction
+let sub = (num1 - num2);
+console.log(sub);
+
+//multiplication
+let multiple = (num1 * num2);
+console.log(multiple);
+
+//division
+let divided = (num1 / num2);
+console.log(divided);
