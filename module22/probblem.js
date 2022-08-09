@@ -140,3 +140,102 @@ console.log(multiple);
 //division
 let divided = (num1 / num2);
 console.log(divided);
+
+
+//৪. তুমি কি দুইটা ভেরিয়েবল এরমধ্যে তুলনা করতে পারো। কম্পারিজন করতে পারো। যে দুইটা ভেরিয়েবল এর মধ্যে প্রথমটা সেকেন্ডটা এর চাইতে ছোট, বড়, অসমান, সমান , ছোট বা সমান, বড় বা সমান। এইগুলা চেক করতে পারো। অর্থাৎ <, >, ==, !=, <=, >= চিহ্নগুলা ব্যবহার করতে পারো। তাহলে দুইটা সংখ্যা টাইপের ভেরিয়েবল ডিক্লেয়ার করে তাদেরকে এই ছয়ভাবে তুলনা করে কোড লিখে ফেলো। 
+
+
+//using of '< '
+
+let mark1 = 95;
+let mark2 = 84;
+
+if (mark1 < mark2) {
+    console.log(mark1, 'is smallest than', mark2);
+}
+else { console.log(mark2, 'is smallest than', mark1); }
+
+
+
+//using of '> '
+
+if (mark1 > mark2) {
+    console.log(mark1, 'is largest  than', mark2);
+}
+else { console.log(mark2, 'is largest  than', mark1); }
+
+
+//using of '== '
+
+if (mark1 == mark2) {
+    console.log(mark1, '&', mark2, 'are equal');
+}
+else { console.log(mark1, '&', mark2, 'arenot equal'); }
+
+//using of '!= '
+
+if (mark1 != mark2) {
+    console.log(mark1, '&', mark2, 'are not equal');
+}
+else { console.log(mark1, '&', mark2, 'are equal'); }
+
+//using of '<= '
+
+if (mark1 <= mark2) {
+    console.log(mark1, 'is small but not equal to', mark2);
+}
+else { console.log(mark1, 'is neither samll & not equal to', mark2); }
+
+//using of '=> '
+
+if (mark1 >= mark2) {
+    console.log(mark1, 'is large & not  equal to', mark2);
+}
+else { console.log(mark1, 'is neither  large &  nor equal to', mark2); }
+
+
+//৫. তোমার যদি দুইটা শর্ত পূরণ করতে বলে। এবং দুইটা শর্তের মধ্যে দুইটাই পূরণ করতে হবে। তাহলে তুমি কি সেটা চেক করতে পারবে? একইভাবে যদি বলে তুমি দুইটা শর্তের যেকোন একটা পূরণ করতে পারবে। অর্থাৎ তুমি && এবং || এর ব্যবহার করতে পারো কিনা। যদি পারো তাহলে নিজে নিজে এই রকমের কোড লিখে ফেলো। 
+
+let dressType = 'Salwar-suit';
+let dressColor = 'Green';
+
+
+//&&
+
+if (dressType && dressColor) {
+    console.log('I will buy this dress');
+}
+else { console.log('I will not buy this dress'); }
+
+//||
+
+if (dressType || dressColor) {
+    console.log('I will not  buy this dress');
+}
+else { console.log('I will buy this dress'); }
+
+//৭. তোমাকে যদি বলে একটা while লুপ দিয়ে ৭ থেকে ১৯ পর্যন্ত যতগুলা বিজোড় সংখ্যা আছে সেগুলা দেখাতে। তুমি কি সেটা দেখাতে পারবে? পারলে সেই কোড লিখে ফেলো। 
+
+let oddNumbers = 7;
+while (oddNumbers < 20) {
+    console.log(oddNumbers);
+    oddNumbers += 2;
+}
+
+//৮. তোমাকে যদি বলা হয় তুমি একটা array ডিক্লেয়ার করবে। এবং সেটার মধ্যে কয়টা উপাদান আছে সেটা বের করবে হবে। সেই array এর এর মধ্যে চতুর্থ পজিশন এর উপাদান চেইঞ্জ করতে হবে। array এর মধ্যে দুইটা উপাদান যোগ করতে হবে। এবং একটা উপাদান কে বের করে দিতে হবে। তুমি কি সেটা করতে পারবে। 
+
+let rollNumber = [20, 34, 45, 24, 31, 24];
+
+console.log(rollNumber.length);
+
+
+rollNumber[3] = 100;
+console.log(rollNumber)
+
+
+rollNumber.push(50, 60);
+console.log(rollNumber)
+
+
+rollNumber.pop();
+console.log(rollNumber)
