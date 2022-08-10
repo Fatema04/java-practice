@@ -147,8 +147,89 @@ let allMobile = ['samsung', 'oppo', 'mi phone'];
 
 let i = 0;
 while (i < allMobile.length) {
-    i++;
+
     let index = i;
     let mobiles = allMobile[index];
     console.log(mobiles);
+    i++;
 }
+
+//24) একটা ফর লপু চালাও। ৩০ থে কে ৮৬ পর্যন্ত। আর এই লপু ৪৪ এ গে লে ব্রে ক করবে । সে ইজি নি স ক োড করে দে খাও
+
+for (let i = 30; i <= 86; i++) {
+    if (i == 45) {
+        break;
+    }
+    console.log(i);
+}
+
+//25) ত োমার যত বই আছে সে গুলার দাম নি য়ে একটা array লি খে ফে ল ো। যে বই গুল োর দাম ২০০টাকার উপরে সে গুলাকে স্কি প করবে । অর্থাৎ সে গুলাকে আউটপুট হি সে বে দে খাবে না। বাকি দে র কেআউটপুট হি সে বে দে খাবে । দে খ ো করতে পার
+
+let bookPrice = [225, 254, 135, 400, 350, 150];
+
+for (let i = 0; i < bookPrice.length; i++) {
+    let index = i;
+    let element = bookPrice[index];
+
+    if (element > 200) {
+        console.log(element);
+    }
+
+}
+//26) Write a function called foo() which prints “foo” and a function called bar()which prints “bar”. Call function bar() in the foo() function after printing. Whatwill be the output? Now call the foo() to see the output.
+
+function foo() {
+    console.log('foo');
+}
+
+bar();
+
+
+function bar() {
+    console.log('bar');
+}
+
+foo();
+
+//27) Write a function called make_avg() which will take an three integers and return the average of those values.
+
+function make_avg(num1, num2, num3) {
+    let getAverage = (num1 + num2 + num3) / 3;
+    console.log(getAverage);
+}
+make_avg(15, 7, 8)
+//28) Challenging: Write a function called make_avg() which will take an array ofintegers and the size of that array and return the average of those values.
+
+let sums = 0;
+function make_avge(nums) {
+
+    let sum = nums[0] + nums[1] + nums[2];
+
+    return sum / nums.length;
+
+}
+let arr = [22, 43, 13];
+
+let result = make_avge(arr);
+console.log(result);
+
+//29) Write a function called odd_even() which takes an integer value and tellswhether this value is even or odd. You need to do it in 4 ways:
+//● Has return + Has parameter
+//● No return + Has parameter
+
+function odd_even(number) {
+    if (number % 2 == 0) {
+        console.log('even')
+    }
+    else { console.log('odd'); }
+}
+odd_even(6);
+
+//30) একটা ফাংশন লি খবা যে টা ১৩ এর নামতা (multiplication table) আউটপুট হি সে বেদে খাবে ।
+
+function table(numberr) {
+    for (let i = 0; i <= 10; i++) {
+        console.log(numberr, 'X', i, '=', numberr * i);
+    }
+}
+table(13);
