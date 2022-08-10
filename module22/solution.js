@@ -32,3 +32,5 @@ function getArea(firstSide, secoundSide, thirdSide) {
 }
 let totalArea = getArea(25, 20, 15);
 console.log(totalArea);
+
+//57) ক োন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কি না। সে টা চে ক করার একটাফাংশন লি খ ো।
