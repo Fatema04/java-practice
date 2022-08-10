@@ -92,3 +92,33 @@ console.log(allOddNum);
 
 let totalOfOdd = sumOfOdd(allOddNum);
 console.log(totalOfOdd);
+
+//38) leapYear() নামে ফাংশন লি খ ো এবং নে ক্সট ইয়ার অর্থাৎ ২০২৩ কি leap year নাকি সে টাচে ক কর ো। Leap year হলে ফাংশন true রি টার্ন করবে আর leap year না হলে false রি টার্ন করবে ।
+
+function findLeapYear(year) {
+    if (year % 4 == 0) {
+        console.log('true');
+    }
+    else { console.log('false'); }
+}
+findLeapYear(2023);
+
+/**
+ * 39) ত োমার বয়স কি odd নাকি even সংখ্যা সে টা চে ক কর একটা ফাংশন দি য়ে । সে ই
+ফাংশনকে ক োন সংখ্যা প্যারামি টার হি সে বে দি লে , সে ই সংখ্যা Even হলে ফাংশন true রি টার্ন
+করবে আর Odd হলে false রি টার্ন করবে ।
+ */
+
+
+function findOddEven(myAge) {
+    if (myAge % 2 == 0) {
+        console.log('true');
+    }
+    else { console.log('false'); }
+}
+findOddEven(24);
+
+/**
+ * 40) এমন একটা ফ্যাংশনা লি খ ো যে টাকে তুমি ঘন্টাকে ইনপুট প্যারামি টার হি সে বে দি বে । আর সে
+সে ই ঘন্টাকে মি নি টে কনভার্ট করে মি নি ট রি টার্ন করবে ।
+ */
