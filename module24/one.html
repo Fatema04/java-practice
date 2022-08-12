@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 id="first">welcome to my dom</h1>
+        <ul>
+            <li class="greet">hi</li>
+            <li>hellow</li>
+            <li>how are you?</li>
+
+        </ul>
+    </main>
+    <script src="one.js"></script>
+    <script>
+        /*type1
+        const liCollection = document.getElementsByTagName('li');
+         console.log(liCollection);*/
+        //type2
+        const liCollection = document.getElementsByTagName('li');
+        for (const li of liCollection) {
+            console.log(li);
+            console.log(li.innerText);
+        }
+        const classes = document.getElementsByClassName('greet');
+        console.log(classes);
+
+        const allLi = document.querySelectorAll('.container');
+
+        for (const li of allLi) {
+            console.log(li);
+        }
+    </script>
+</body>
+
+</html>
