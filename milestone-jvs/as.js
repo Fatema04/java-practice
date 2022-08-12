@@ -59,8 +59,8 @@ function publicBusFare(people) {
     }
 
     else if (people > microCapacity && people < busCapacity) {
-        if (people % 11 !== 0) {
-            return (people % 11) * 250;
+        if (people % microCapacity !== 0) {
+            return (people % microCapacity) * 250;
         }
         else { return 0; }
     }
@@ -72,10 +72,10 @@ function publicBusFare(people) {
 
 
     else if (people % busCapacity !== 0) {
-        let reminder = people % 50;
+        let reminder = people % busCapacity;
 
         if (reminder % microCapacity !== 0) {
-            return (reminder % 11) * 250;
+            return (reminder % microCapacity) * 250;
         }
         else { return 0; }
     }
@@ -83,13 +83,17 @@ function publicBusFare(people) {
 
 
 
+
 //Problem 5 -----------isBestFriend-----------//
 
-function isBestFriend(person1, person2) {
+function isBestFriend(object1, object2) {
 
-    if (person1.name == person2.friend && person2.name == person1.friend) {
+    if (object1.name.toLowerCase() == object2.friend.toLowerCase() && object2.name.toLowerCase() == object1.friend.toLowerCase()) {
 
         return true;
     }
     else { return false; }
+
 }
+
+
