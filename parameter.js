@@ -25,3 +25,7 @@ function math(a, b, c, d) {
 }
 
 math(15, 12, 3, 10);
+
+
+
+function bestFriend(name: 'tom', fri)

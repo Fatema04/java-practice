@@ -193,3 +193,39 @@ console.log(allPositive);
 
 
 //--------------------------THE END-------------------------------------
+function publicBusFare(people) {
+
+    let bus = 50;
+    let micro = 11;
+
+    if (people < micro) {
+        console.log(people * 250);
+    }
+
+    else if (people > micro && people < bus) {
+        if (people % 11 !== 0) {
+            let reminder = people % 11;
+            console.log(reminder * 250)
+
+        }
+    }
+
+
+    else if (people % bus !== 0) {
+        let reminder = people % 50;
+        console.log(reminder);
+        // if (reminder < micro) {
+        //     let reminder2 = reminder % micro;
+        //     console.log(reminder2 * 250)
+
+        if (reminder % micro !== 0) {
+            // let reminder1 = people % 50;
+            let reminder1 = reminder % 11;
+            console.log(reminder1 * 250)
+
+        }
+    }
+
+}
+
+publicBusFare(100);
