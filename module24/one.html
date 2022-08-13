@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <main>
+    <main id="main-section">
 
         <section class="container">
             <h1 id="first">birds</h1>
-            <ul>
+            <ul id="ul-of-bird">
                 <li class="bird">parote</li>
                 <li class="bird">cuckoo</li>
                 <li class="bird">crow</li>
@@ -45,25 +45,27 @@
         </section>
     </main>
     <script src="one.js"></script>
+    <script src="append.js"></script>
     <script src="connection.js"></script>
+
     <script>
         /*type1
         const liCollection = document.getElementsByTagName('li');
          console.log(liCollection);*/
         //type2
-        const liCollection = document.getElementsByTagName('li');
-        for (const li of liCollection) {
-            console.log(li);
-            console.log(li.innerText);
-        }
-        const classes = document.getElementsByClassName('greet');
-        console.log(classes);
-
-        const allLi = document.querySelectorAll('.container');
-
-        for (const li of allLi) {
-            console.log(li);
-        }
+        //const liCollection = document.getElementsByTagName('li');
+        //for (const li of liCollection) {
+        //    console.log(li);
+        //    console.log(li.innerText);
+        //}
+        //const classes = document.getElementsByClassName('greet');
+        //console.log(classes);
+//
+        //const allLi = document.querySelectorAll('.container');
+//
+        //for (const li of allLi) {
+        //    console.log(li);
+        //}
     </script>
 </body>
 
