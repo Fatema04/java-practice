@@ -50,3 +50,39 @@
         })
 
 */
+
+//-----------------------EVENT HANDLER---------------------------------//
+
+/**TYPE 1
+ * 
+ * <button onclick="handleOnClick()">handle</button>
+ * 
+ *  <script>
+        function handleOnClick() {
+            console.log('button clicked')
+        }
+    </script>
+
+ type 2
+
+  <h3 id="handle-status">default text</h3>
+    <button onclick="handleOnClick()">handle</button>
+    <script>
+
+        function handleOnClick() {
+            const handleStatus = document.getElementById('handle-status');
+            handleStatus.innerText = 'thank you';
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+ */

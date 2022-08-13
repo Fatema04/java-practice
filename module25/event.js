@@ -40,3 +40,10 @@ document.getElementById('tomato-button').addEventListener('click', function () {
     document.body.style.backgroundColor = 'tomato';
 })
 
+
+//event handler
+
+function handleOnClick() {
+    const handleStatus = document.getElementById('handle-status');
+    handleStatus.innerText = 'thank you'
+}
