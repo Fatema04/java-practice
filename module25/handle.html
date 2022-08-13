@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Final DOM Handler</h1>
+    <h3 id="handle-status">default text</h3>
+    <button onclick="handleOnClick()">handle</button>
+    <button id="event-handle">Again click me</button>
+
+
+
+
+    <script src="event.js"></script>
+    <script>
+        document.getElementById('event-handle').addEventListener('click', function () {
+            const handleStatus = document.getElementById('handle-status');
+            handleStatus.innerText = 'Many many thanks for again clicking me'
+        })
+
+    </script>
+</body>
+
+</html>
