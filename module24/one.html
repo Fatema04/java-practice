@@ -6,19 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .text-large {
+            font-size: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <main class="container">
-        <h1 id="first">welcome to my dom</h1>
-        <ul>
-            <li class="greet">hi</li>
-            <li>hellow</li>
-            <li>how are you?</li>
+    <main>
 
-        </ul>
+        <section class="container">
+            <h1 id="first">birds</h1>
+            <ul>
+                <li class="bird">parote</li>
+                <li class="bird">cuckoo</li>
+                <li class="bird">crow</li>
+
+            </ul>
+        </section>
+        <section class="fruit-container text-large" id="id-of-fruits">
+            <h1 id="second">fruits</h1>
+            <ul>
+                <li class="fruit">apple</li>
+                <li class="fruit">orange</li>
+                <li class="fruit">banana</li>
+
+            </ul>
+        </section>
+        <section class="container">
+            <h1 id="third">flowers</h1>
+            <ul>
+                <li class="flower">lili</li>
+                <li class="flower">meri-gold</li>
+                <li class="flower">rose</li>
+
+            </ul>
+        </section>
     </main>
     <script src="one.js"></script>
+    <script src="connection.js"></script>
     <script>
         /*type1
         const liCollection = document.getElementsByTagName('li');
