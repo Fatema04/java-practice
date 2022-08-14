@@ -73,8 +73,28 @@
             const handleStatus = document.getElementById('handle-status');
             handleStatus.innerText = 'thank you';
         }
+   
     </script>
 
+
+//-----------------------------INPUT BOX---------------------------------//
+
+  <p id="default-text">ENTER A NAME</p>
+    <input id="input-field" type="text">
+    <button id="update-button">Update</button>
+
+
+ <script>
+        document.getElementById('update-button').addEventListener('click', function () {
+
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const p = document.getElementById('default-text');
+            p.innerText = inputText;
+            inputField.value = '';
+        })
+    </script>
 
 
 

@@ -47,3 +47,16 @@ function handleOnClick() {
     const handleStatus = document.getElementById('handle-status');
     handleStatus.innerText = 'thank you'
 }
+
+//input box
+
+document.getElementById('update-button').addEventListener('click', function () {
+
+    const inputField = document.getElementById('input-field');
+    const inputText = inputField.value;
+
+    const p = document.getElementById('default-text');
+    p.innerText = inputText;
+    inputField.value = '';
+})
+
