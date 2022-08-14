@@ -117,4 +117,28 @@
     
     document.getElementById('input-box').addEventListener('blur',function(){})
 
+
+//-------------------------ADVANCE DELETE CONFIRMATION BUTTON-----------------//
+
+ <h3 id="secret"> HIDE ME</h3>
+    <input type="text" id="delete-confirm">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteButton = document.getElementById('delete-btn');
+            if (text == 'delete') {
+                deleteButton.removeAttribute('disabled');
+            }
+            else {
+                deleteButton.setAttribute('disabled', true)
+            }
+        });
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            const secret = document.getElementById('secret');
+
+            secret.style.display = 'none';
+        })
+    </script>
  */
