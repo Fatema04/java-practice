@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Explore more event handler</h1>
+    <input id="input-box" type="text">
+    <button id="event-button">Event</button>
+</body>
+<script>
+
+    document.getElementById('event-button').addEventListener('mousemove', function () { })
+
+    //    //document.getElementById('input-box').addEventListener('focus',function(){
+    //    //
+    //
+    //    //})
+    //    document.getElementById('input-box').addEventListener('focus',function(){
+    //        
+    //    })
+    //
+    // document.getElementById('input-box').addEventListener('keydown', function (event) {
+    //     console.log(event.target.value);
+    // })
+    // document.getElementById('input-box').addEventListener('keypress', function (event) {
+    //     console.log(event.target.value);
+    // })
+    document.getElementById('input-box').addEventListener('keyup', function (event) {
+        console.log(event.target.value);
+    })
+</script>
+
+</html>

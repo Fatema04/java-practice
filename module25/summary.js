@@ -97,12 +97,24 @@
     </script>
 
 
+//----------------------KEY DOWN & KEY PRESS & KEY UP-----------------------//
 
+<script>
+    document.getElementById('input-box').addEventListener('keydown', function (event) {
+         console.log(event.target.value);
+     })
+     document.getElementById('input-box').addEventListener('keypress', function (event) {
+         console.log(event.target.value);
+     })
+    document.getElementById('input-box').addEventListener('keyup', function (event) {
+        console.log(event.target.value);
+    })
+</script>
 
+//---------------------------- FOCUS & BLUR-----------------------------//
 
-
-
-
-
+    document.getElementById('input-box').addEventListener('focus',function(){})
+    
+    document.getElementById('input-box').addEventListener('blur',function(){})
 
  */
