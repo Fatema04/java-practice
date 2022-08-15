@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+
+        <div id="id-of-fruit">
+            <h2>Fruits</h2>
+            <p class="fruit">Mango</p>
+            <p class="fruit">Apple</p>
+            <p class="fruit">Orange</p>
+            <input type="text" id="input-field">
+            <button id="fruit-button" disabled>See more</button>
+        </div>
+
+        <div id="id-of-flower" onclick="style.backgroundColor='yellow'">
+            <h2>Flowers</h2>
+            <p class="flower">Rose</p>
+            <p class="flower">Sunflower</p>
+            <p class="flower">Water lily</p>
+
+            <button id="flower-button">Explore More</button>
+        </div>
+
+        <div id="id-of-bird">
+            <h2>Birds</h2>
+            <p class="bird">Parrot</p>
+            <p class="bird">Crow</p>
+            <p class="bird">Magphie</p>
+
+            <button id="remove-button">REMOVE ME</button>
+
+        </div>
+    </section>
+    <script>
+        //tag
+        const allHeading = document.getElementsByTagName('h2');
+        for (let heading of allHeading) {
+            heading.style.color = 'green';
+        }
+        //class
+        const birdClass = document.getElementsByClassName('bird');
+        for (let bird of birdClass) {
+            bird.style.color = 'red';
+        }
+        //div background
+        const divOfFlower = document.getElementById('id-of-flower');
+        divOfFlower.style.backgroundColor = 'pink';
+
+        //event handler button
+
+        document.getElementById('flower-button').addEventListener('click', function () {
+            const flowerButton = document.getElementById('flower-button');
+            flowerButton.style.backgroundColor = 'yellow';
+        })
+
+        //REMOVE BUTTON
+
+        document.getElementById('remove-button').addEventListener('click', function () {
+            const removeButton = document.getElementById('remove-button');
+            removeButton.style.display = 'none';
+        })
+
+        //advnc button
+        /**
+         * step1 = target input id
+         *addeEvLs.keyup.function(event)
+         * text evnt.target.value
+         * add if else condition
+         * if--button id .removeatt.dis
+         *
+         * */
+
+        document.getElementById('input-field').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const fruitButton = document.getElementById('fruit-button')
+            if (text === 'more') {
+                fruitButton.removeAttribute('disabled');
+            }
+            else {
+                fruitButton.setAttribute('disabled', true);
+            }
+        })
+
+        //
+
+
+    </script>
+</body>
+
+</html>
