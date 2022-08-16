@@ -3,6 +3,7 @@ console.log('from bank html')
 
 document.getElementById('deposit-button').addEventListener('click', function () {
 
+
     const depositField = document.getElementById('deposit-field');
     const newDepositString = depositField.value;
     const newDeposit = parseFloat(newDepositString);
@@ -13,15 +14,24 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     const previousDeposit = parseFloat(previousDepositString);
 
 
-    const currentDeposit = previousDeposit + newDeposit;
-    depositTotal.innerText = currentDeposit;
+
+    ///
 
     const balanceTotal = document.getElementById('balance-total');
     const previousBalanceString = balanceTotal.innerText;
     const previousBalance = parseFloat(previousBalanceString);
 
-    const newBalance = previousBalance + currentDeposit;
+
+    if (isNaN(newDeposit) === true || newDeposit === 0) {
+        return alert('Please Insert Valid Input');
+    }
+
+    const currentDeposit = previousDeposit + newDeposit;
+    depositTotal.innerText = currentDeposit;
+
+    const newBalance = previousBalance + newDeposit;
     balanceTotal.innerText = newBalance;
+
 
     depositField.value = '';
 })
