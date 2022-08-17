@@ -59,9 +59,12 @@
 document.getElementById('withdraw-button').addEventListener('click', function () {
 
     const newWithdrawAmount = getInputValueById('withdraw-field');
-
     const previousWithdrawTotal = getElementValueById('withdraw-total');
 
+
+    if (isNaN(newWithdrawAmount) === true || newWithdrawAmount === 00) {
+        return alert('Please Insert Valid Input');
+    }
     const newWithdrawTotal = newWithdrawAmount + previousWithdrawTotal;
 
 

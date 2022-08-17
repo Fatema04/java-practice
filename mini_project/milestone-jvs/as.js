@@ -8,18 +8,8 @@ function radianToDegree(number) {
 
 }
 
-//Problem 2 -----isJavaScriptFile------//
 
-function isJavaScriptFile(fileName) {
 
-    const extension = fileName.split('.').pop();
-
-    if (extension === 'js') {
-        return true;
-    }
-
-    else { return false; }
-}
 
 //Problem 3--------oilPrice--------//
 
@@ -82,11 +72,16 @@ function publicBusFare(people) {
 }
 
 
+//--------------------------------------------//
 
 
 //Problem 5 -----------isBestFriend-----------//
 
 function isBestFriend(object1, object2) {
+
+    if (object1 !== typeof (Object) && object2 !== typeof (Object)) {
+        console.log('wrong')
+    }
 
     if (object1.name.toLowerCase() == object2.friend.toLowerCase() && object2.name.toLowerCase() == object1.friend.toLowerCase()) {
 
@@ -95,5 +90,29 @@ function isBestFriend(object1, object2) {
     else { return false; }
 
 }
+const result = isBestFriend(object1 = { name: 'ayan', friend: 'ayash' },
+    object2 = { name: 'ayash', friend: 'ayan' }
+)
+console.log(result);
 
 
+
+//Problem 2 -----isJavaScriptFile------//
+
+
+function isJavaScriptFile(fileName) {
+
+    if (typeof fileName !== String) {
+        console.log('w')
+    }
+
+    const extension = fileName.split('.').pop();
+
+    if (extension === 'js') {
+        return true;
+    }
+
+    else { return false; }
+}
+let r = isJavaScriptFile(2);
+console.log(r)

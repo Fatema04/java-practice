@@ -67,12 +67,20 @@ function setTextElementValueById(elementId, newValue) {
 document.getElementById('deposit-button').addEventListener('click', function () {
 
 
+
+
+
     const newDepositAmount = getInputValueById('deposit-field');
     const previousDepositTotal = getElementValueById('deposit-total');
 
+
+    if (isNaN(newDepositAmount) === true || newDepositAmount === 00) {
+        return alert('Please Insert Valid Input');
+    }
+
+
+
     const newDepositTotal = newDepositAmount + previousDepositTotal;
-
-
     setTextElementValueById('deposit-total', newDepositTotal);
 
 
@@ -80,7 +88,6 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 
     const previousBalanceTotal = getElementValueById('balance-total')
     const newBalanceTotal = previousBalanceTotal + newDepositAmount;
-
     setTextElementValueById('balance-total', newBalanceTotal);
 
 

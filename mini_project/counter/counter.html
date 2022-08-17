@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h3 id="count">0</h3>
+    <button id="plus-button">plus</button>
+    <button id="minus-button" onclick="minusOne()">minus</button>
+
+
+    <script>
+
+        //addeventlistener
+        document.getElementById('plus-button').addEventListener('click', function () {
+            count++;
+            const counter = document.getElementById('count');
+            counter.innerText = count;
+
+        });
+
+        //handler
+
+        let count = 0;
+        function minusOne() {
+            count--;
+            const counter = document.getElementById('count');
+            counter.innerText = count;
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
