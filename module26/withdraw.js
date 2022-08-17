@@ -34,21 +34,41 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     withdrawField.value = '';
 })
 
-document.getElementById(inputId).addEventListener('click', function () {
+function getInputValueById(inputFieldId) {
     const inputField = document.getElementById(inputId);
-    const outputString = inputField.value;
-    const output = parseFloat(outputString);
+    const inputFieldValueString = inputField.value;
+    const inputFieldValue = parseFloat(inputFieldValueString);
+
+    inputField.value = '';
+    return inputFieldValue;
+}
+function getElementValueById(textElementId) {
+    const textElement = document.getElementById(elementId);
+    const textElementValueString = textElement.innerText;
+    const textElementValue = parseFloat(textElementValueString);
+
+    return textElementValue;
+}
+
+function setTextElementValueById(elementId, newValue) {
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
+}
 
 
-    const amountField = document.getElementById(amountId);
-    const amountString = amountField.innerText;
-    const amount = parseFloat(amountString);
+document.getElementById('deposit-button').addEventListener('click', function () {
 
-    const totalBalance = document.getElementById(balanceId);
-    const balanceString = totalBalance.innerText;
-    const balance = parseFloat(balanceString);
+    const newDepositAmount = document.getElementById('deposit-field');
+
+    const previousDepositTotal = document.getElementById('deposit-total');
+
+    const newDepositTotal = newDepositAmount + previousDepositTotal;
+    setTextElementValueById('deposit-field', newDepositTotal);
+
+    const previousBalanceTotal = document.getElementById('balance-total')
+    const newBalanceTotal = previousBalanceTotal + inputFieldValue;
+
+    setTextElementValueById('balance-total', newBalanceTotal);
 
 
 })
-
-return if ()
