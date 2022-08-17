@@ -36,14 +36,17 @@
 //     depositField.value = '';
 // })
 
-function getInputValueById(inputValueId) {
-    const inputField = document.getElementById(inputId);
+//set input field
+function getInputValueById(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId);
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString)
     inputField.value = '';
     return inputFieldValue;
 }
-function getElementValueById(elementValueId) {
+
+//set element
+function getElementValueById(elementId) {
     const textElement = document.getElementById(elementId);
     const textElementValueString = textElement.innerText;
     const textElementValue = parseFloat(textElementValueString);
@@ -51,28 +54,37 @@ function getElementValueById(elementValueId) {
     return textElementValue;
 }
 
+//function to get innertext
+
 function setTextElementValueById(elementId, newValue) {
     const textElement = document.getElementById(elementId);
     textElement.innerText = newValue;
 }
 
 
+
+
 document.getElementById('deposit-button').addEventListener('click', function () {
 
-    //getInputValueById('deposit-field');
-    const newDepositAmount = document.getElementById('deposit-field');
-    // getElementValueById('deposit-total');
 
-    previousDepositTotal = document.getElementById('deposit-total');
+    const newDepositAmount = getInputValueById('deposit-field');
+    const previousDepositTotal = getElementValueById('deposit-total');
 
     const newDepositTotal = newDepositAmount + previousDepositTotal;
 
-    setTextElementValueById('deposit-field', newDepositTotal);
 
-    const previousBalanceTotal = document.getElementById('balance-total')
-    const newBalanceTotal = previousBalanceTotal + inputFieldValue;
+    setTextElementValueById('deposit-total', newDepositTotal);
+
+
+
+
+    const previousBalanceTotal = getElementValueById('balance-total')
+    const newBalanceTotal = previousBalanceTotal + newDepositAmount;
 
     setTextElementValueById('balance-total', newBalanceTotal);
 
 
 })
+
+
+
