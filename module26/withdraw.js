@@ -34,26 +34,7 @@
 //     withdrawField.value = '';
 // })
 
-// function getInputValueById(inputFieldId) {
-//     const inputField = document.getElementById(inputId);
-//     const inputFieldValueString = inputField.value;
-//     const inputFieldValue = parseFloat(inputFieldValueString);
 
-//     inputField.value = '';
-//     return inputFieldValue;
-// }
-// function getElementValueById(textElementId) {
-//     const textElement = document.getElementById(elementId);
-//     const textElementValueString = textElement.innerText;
-//     const textElementValue = parseFloat(textElementValueString);
-
-//     return textElementValue;
-// }
-
-// function setTextElementValueById(elementId, newValue) {
-//     const textElement = document.getElementById(elementId);
-//     textElement.innerText = newValue;
-// }
 
 
 document.getElementById('withdraw-button').addEventListener('click', function () {

@@ -74,7 +74,7 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     const previousDepositTotal = getElementValueById('deposit-total');
 
 
-    if (isNaN(newDepositAmount) === true || newDepositAmount === 00) {
+    if (isNaN(newDepositAmount) === true || newDepositAmount <= 0) {
         return alert('Please Insert Valid Input');
     }
 
