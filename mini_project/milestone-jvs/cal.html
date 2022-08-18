@@ -11,9 +11,10 @@
 <body>
     <input type="text" name="" id="coupon-field" placeholder="Enter coupon">
     <br>
+    <br>
     <button id="price-button" disabled>Price</button>
     <script>
-        document.getElementById('price-button').addEventListener('keyup', function (event) {
+        document.getElementById('coupon-field').addEventListener('keyup', function (event) {
 
             const text = event.target.value;
             const priceButton = document.getElementById('price-button');
