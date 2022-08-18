@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1> <span id="taka">--</span> Tk</h1>
+    <div>
+
+        <!-- <input type="number" name="" id="price-field" placeholder="Input amount"> -->
+        <input type="text" name="" id="coupon-field" placeholder="Enter coupon">
+    </div>
+
+
+    <button id="price-button">Price</button>
+
+
+    <script>
+        document.getElementById('price-button').addEventListener('keyup', function (event) {
+
+            const text = event.target.value;
+            const priceButton = document.getElementById('price-button');
+
+            if (text === 'DOM') {
+                console.log('G')
+                //priceButton.removeAttribute('disabled', true);
+            }
+            else {
+                console.log('h')
+                //priceButton.setAttribute('disabled', true); }
+
+
+            }
+        })
+
+        // const priceField = document.getElementById('price-field');
+
+        // document.getElementById('price-button').addEventListener('click', function () {
+        //     const priceFieldValue = priceField.value;
+        //     let percentage = priceFieldValue * 30 / 100;
+
+        //     const taka = document.getElementById('taka');
+        //     const amount = priceFieldValue - percentage;
+        //     taka.innerText = amount;
+        // })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

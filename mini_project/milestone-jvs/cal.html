@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="coupon-field" placeholder="Enter coupon">
+    <br>
+    <button id="price-button" disabled>Price</button>
+
+
+    <script>
+        document.getElementById('price-button').addEventListener('keyup', function (event) {
+
+            const text = event.target.value;
+            const priceButton = document.getElementById('price-button');
+
+            if (text === 'DOM') {
+
+                priceButton.removeAttribute('disabled', true);
+            }
+            else {
+                priceButton.setAttribute('disabled', true);
+            }
+
+
+
+        })
+    </script>
+</body>
+
+</html>
