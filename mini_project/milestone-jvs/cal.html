@@ -11,26 +11,23 @@
 <body>
     <input type="text" name="" id="coupon-field" placeholder="Enter coupon">
     <br>
-    <button id="price-button" disabled>Price</button>
+    <button id="price-button" disabled>Price</button <script>
+    document.getElementById('price-button').addEventListener('keyup', function (event) {
 
+    const text = event.target.value;
+    const priceButton = document.getElementById('price-button');
 
-    <script>
-        document.getElementById('price-button').addEventListener('keyup', function (event) {
+    if (text === 'DOM') {
 
-            const text = event.target.value;
-            const priceButton = document.getElementById('price-button');
-
-            if (text === 'DOM') {
-
-                priceButton.removeAttribute('disabled', true);
-            }
-            else {
-                priceButton.setAttribute('disabled', true);
-            }
+    priceButton.removeAttribute('disabled', true);
+    }
+    else {
+    priceButton.setAttribute('disabled', true);
+    }
 
 
 
-        })
+    })
     </script>
 </body>
 
