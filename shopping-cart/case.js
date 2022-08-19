@@ -11,8 +11,11 @@ function updateNumber(isIncrease, inputFieldId) {
         newNumber = previousNumber + 1;
     }
     else { newNumber = previousNumber - 1; }
-    numberField.value = newNumber;
-    return newNumber;
+    if (newNumber >= 0) {
+        numberField.value = newNumber;
+        return newNumber;
+    }
+    return 0;
 
 }
 
