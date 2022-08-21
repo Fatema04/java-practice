@@ -79,6 +79,7 @@ function addToCart(name) {
   <th scope="row">${count}</th>
   <td>${name}</td
   
+  
   `
   itemList.appendChild(tableBody);
 
