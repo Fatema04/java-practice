@@ -19,6 +19,7 @@ function getCard(details) {
   const mainSection = document.getElementById('main-section');
   const modalInfo = JSON.stringify(details);
   const div = document.createElement('div');
+  console.log(modalInfo)
   div.innerHTML = `
 
 <div class="card" style="max-width:400px;">
@@ -26,10 +27,10 @@ function getCard(details) {
   <div class="card-body">
     <h5 class="card-title">${details.name}</h5>
     <p class="card-text"> ${details.description}</p>
-    <button  onclick='addToCart(${details})'>${details.cart}</button>
+    <button  onclick="addToCart('${details.name}')">${details.cart}</button>
     <!-- Button trigger modal -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick='openModal(${details.modalInfo})' data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="openModal('${details.name}', '${details.description}', '${details.imageUrl}')" data-bs-target="#exampleModal">
       See more
     </button>
 
@@ -41,51 +42,48 @@ function getCard(details) {
 
 `
   mainSection.appendChild(div);
-  console.log(details)
 }
 getCard(busObject);
 getCard(carObject);
 
 // //modal
-// 
-function openModal(modalObj) {
+
+function openModal(name, description, imageUrl) {
+  console.log('fatema')
 
   const modalBody = document.getElementById('modal-body');
   modalBody.innerHTML = `
     <div class="card" style="max-width:400px;">
-  <img class="card-img" src=${modalObj.imageUrl} class="card-img-top" alt="...">
+  <img class="card-img" src=${imageUrl} class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${modalObj.name}</h5>
-    <p class="card-text"> ${modalObj.description}</p>
-    
+    <h5 class="card-title">${name}</h5>
+    <p class="card-text"> ${description}</
   </div>
   </div>
     `
-
-
-
 }
-openModal(busObject);
-openModal(carObject);
+// openModal(busObject);
 
+// openModal(carObject);
 //ADD LIST
 let count = 0;
 function addToCart(name) {
-  console.log(name)
+
   count++;
+  document.getElementById('list').innerText = count;
 
   const itemList = document.getElementById('item-list');
-
 
   const tableBody = document.createElement('tr');
   tableBody.innerHTML = `
   <th scope="row">${count}</th>
-  
+  <td>${name}</td
   
   `
   itemList.appendChild(tableBody);
 
 }
+
 
 
 
