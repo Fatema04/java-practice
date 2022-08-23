@@ -24,3 +24,20 @@ const additon = function add3(num3, num4) {
 const sum = (first, last) => first + last;
 const summ = sum(10, 20);
 console.log(summ);
+
+
+//no parameter
+const getPie = () => 3.1416;
+
+//1 parameter
+const getDouble = (number) => number * 2;
+
+//multi line arraw function
+const multi = (x, y, z) => {
+    const firstOutput = x + y;
+    const secondOutput = y + z;
+    const finalOutput = firstOutput + secondOutput / 2;
+    return finalOutput;
+}
+const output = multi(10, 20, 30);
+console.log(output);
