@@ -53,7 +53,38 @@ const myFriend = (friend) => {
 
 console.log(myFriend(friend));
 
-//type2
+//get squre
+let roll = [5, 8, 9];
+
+const squre = roll.map(function (element) {
+    return element * 2;
+})
+console.log(squre);
+
+function findSum(squre) {
+    let sum = 0;
+    for (let i = 0; i < squre.length; i++) {
+        sum = sum + squre[i];
+    }
+    return sum;
+}
+const getSqure = findSum(squre);
+console.log(getSqure);
+
+console.log(Math.sqrt(getSqure));
+console.log(Math.sqrt(44));
+
+//4
+
+
+
+const twoArr = (arr1, arr2) => {
+    return [...arr1, ...arr2];
+}
+const arrays = twoArr(arr1 = [1, 2, 3, 4], arr2 = [5, 6, 7, 8, 9])
+console.log(arrays)
+console.log(Math.max(...arrays))
+
 
 
 
