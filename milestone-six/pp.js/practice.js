@@ -12,17 +12,21 @@ console.log(age, birthDate)
 */
 const myName = 'Fatema';
 
-console.log(`I am ${myName}`);
+
 
 //2
 
 const studentId = 20;
 const studentGpa = 'A-';
+
 const student1 = {
-    id: `${studentId}`,
-    gpa: `${studentGpa}`
+    id: studentId,
+    gpa: studentGpa
 }
-console.log(student1)
+console.log(`My student id is ${student1.id}`);
+console.log(`My GPA is ${student1.gpa}`);
+//console.log(student1)
+
 
 
 /*
@@ -76,7 +80,7 @@ console.log(multiply)
 ৬. [ চ্যালেঞ্জিং। গুগলে সার্চ দিয়ে বের করো ] অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো */
 
 const findOdd = [2, 3, 7, 9, 10];
-const odd = findOdd.filter(n => n % 2 !== 0)
+const odd = findOdd.filter(n => n % 2 === 1)
 console.log(odd)
 
 /*
@@ -104,20 +108,23 @@ let person = {
     firstName: 'John',
     lastName: 'Doe'
 };
-const objFirstName = person.firstName;
-console.log(objFirstName)
+const { firstName: Smith } = person;
+console.log(Smith)
 
 
 /*
 ৯. [চ্যালেঞ্জিং] array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে। */
+
+
 const colorArr = ["red", "yellow", "blue", "green", "white", "black"];
-const three = colorArr[2];
+const [, , three] = colorArr;
+//const three = colorArr[2];
 console.log(three)
 
 /*
 ১০. তিনটা প্যারামিটার ওয়ালা একটা ফাংশন লিখবে। যেই ফাংশনের কাজ হবে তিনটা প্যারামিটার নিয়ে সেই তিনটা প্যারামিটার এর যোগ করে যোগফল রিটার্ন করবে। আর থার্ড প্যারামিটার এর একটা ডিফল্ট ভ্যালু থাকবে। সেটা হবে ৭। */
 
-const tricky = (v1, v2, v3 = 7) => v1 * v2 * v3;
+const tricky = (v1, v2, v3 = 7) => v1 + v2 + v3;
 
 const output4 = tricky(5, 6);
 console.log(output4)
