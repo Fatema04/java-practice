@@ -118,7 +118,6 @@ console.log(Smith)
 
 const colorArr = ["red", "yellow", "blue", "green", "white", "black"];
 const [, , three] = colorArr;
-//const three = colorArr[2];
 console.log(three)
 
 /*
