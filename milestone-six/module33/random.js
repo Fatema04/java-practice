@@ -8,7 +8,7 @@ function loadUser() {
 const displayUser = user => {
     const userContainer = document.getElementById('user-container');
     for (const userData of user) {
-        console.log(userData)
+        // console.log(userData)
         const div = document.createElement('div');
         div.classList.add('user')
         div.innerHTML = `
