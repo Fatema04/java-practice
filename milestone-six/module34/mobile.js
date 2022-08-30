@@ -1,15 +1,35 @@
 console.log('click');
 
-const loadPhones = async (searchText) => {
+const loadPhones = async (searchText, phoneLimit) => {
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
     const res = await fetch(url)
     const data = await res.json()
-    displayPhones(data.data)
+    displayPhones(data.data, phoneLimit);
 
 }
-const displayPhones = (phones) => {
+const displayPhones = (phones, phoneLimit) => {
     const mobileContainer = document.getElementById('mobile-container')
-    mobileContainer.textContent = ''
+    mobileContainer.textContent = '';
+
+    // show 10 phone
+    const showAll = document.getElementById('show-all');
+    if (phoneLimit && phones.length > 10) {
+        phones = phones.slice(0, 10);
+        showAll.classList.remove('d-none')
+    }
+    else { showAll.classList.add('d-none') }
+
+
+    // no phone found
+    const noFound = document.getElementById('no-found-messege');
+    if (phones.length === 0) {
+        noFound.classList.remove('d-none')
+    }
+    else { noFound.classList.add('d-none') }
+
+
+    //all phones
+
     for (const phone of phones) {
         console.log(phone)
         const phoneDiv = document.createElement('div')
@@ -25,12 +45,37 @@ const displayPhones = (phones) => {
         `;
         mobileContainer.appendChild(phoneDiv)
     }
+    toggleSpiner(false);
 }
-document.getElementById('search').addEventListener('click', function () {
+//search process
+
+const processSearch = (phoneLimit) => {
+    toggleSpiner(true);
     const inputField = document.getElementById('input-field');
     const searchText = inputField.value;
-    loadPhones(searchText);
-    inputField.value = ''
+    loadPhones(searchText, phoneLimit);
+
+}
+
+//search button
+document.getElementById('search').addEventListener('click', function () {
+    processSearch(10)
 
 })
-loadPhones()
+
+//spiner
+const toggleSpiner = (isLoding) => {
+    const loaderSection = document.getElementById('loader');
+    if (isLoding === true) {
+        loaderSection.classList.remove('d-none')
+    }
+    else { loaderSection.classList.add('d-none') }
+
+}
+
+//show all button
+document.getElementById('btn-show-all').addEventListener('click', function () {
+    processSearch();
+})
+
+//loadPhones()

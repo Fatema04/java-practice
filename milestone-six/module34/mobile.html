@@ -21,6 +21,19 @@
     <section>
         <div id="mobile-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
         </div>
+        <div id="no-found-messege" class="mt-4 d-none">
+            <h3 class="text-warning">No phone found</h3>
+        </div>
+        <div id="show-all" class="d-grid col-2 mx-auto  d-none">
+            <button id="btn-show-all" class="btn btn-primary fs-2" type="button">Show all</button>
+        </div>
+    </section>
+    <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center mt-5">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
     </section>
     <script src="mobile.js"></script>
 </body>
