@@ -95,7 +95,7 @@ const toggleSpiner = (isloading) => {
     }
     else { loader.classList.add('d-none') }
 }
-//show all button 
+//show all butto
 document.getElementById('btn-show-all').addEventListener('click', function () {
     searchProcess()
 
