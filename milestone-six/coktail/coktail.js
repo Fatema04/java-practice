@@ -41,7 +41,7 @@ const displayCoktail = (cocktails, limit) => {
     else { noFound.classList.add('d-none') }
 
     for (const cocktail of cocktails) {
-        //console.log(cocktail);
+        console.log(cocktail);
 
 
         //create card
@@ -49,9 +49,9 @@ const displayCoktail = (cocktails, limit) => {
         const drinkDiv = document.createElement('div');
         drinkDiv.classList.add('col');
         drinkDiv.innerHTML = `
-        <div class="card">
+        <div class="card" style="height:800px">
 
-          <img src="${cocktail.strDrinkThumb}" class="card-img-top w-100 h-25" alt="...">
+          <img src="${cocktail.strDrinkThumb}" class="card-img-top w-100 h-75" alt="...">
           <div class="card-body">
             <h5 class="card-title">${cocktail.strDrink}</h5>
             <p class="card-text">${cocktail.strInstructions}</p>
@@ -124,10 +124,16 @@ const openModal = async (strDrink) => {
 
 // displayCoktail
 const displayModal = cocktail => {
-    console.log(cocktail[0].idDrink)
-    const modalTitle = document.getElementById('modal-body1');
+    //console.log(cocktail[0].idDrink)
 
-    modalTitle.innerHTML = `
+    const modalTitle = document.getElementById('exampleModalLabel');
+    modalTitle.innerText = `${cocktail[0].strDrink}`;
+
+
+    const modalbody = document.getElementById('modal-body1');
+
+    modalbody.innerHTML = `
+    <img class="w-25"  src="${cocktail[0].strDrinkThumb}"
     <p>${cocktail[0].strDrink}</p>
     <p>${cocktail[0].idDrink}</p>
     `
