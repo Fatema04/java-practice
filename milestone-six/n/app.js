@@ -6,4 +6,16 @@ const loadWeather = city => {
         .then(res => res.json())
         .then(data => console.log(data))
 }
-loadWeather('khulna')
+
+const displayTem = data => {
+    console.log(data)
+    const tempu = document.getElementById('temperature')
+    tempu.innerText = data.main.temp;
+}
+document.getElementById('btn-search').addEventListener('click', function () {
+
+    const searchField = document.getElementById('input-field');
+    const city = searchField.value;
+    loadWeather(city)
+})
+loadWeather()
