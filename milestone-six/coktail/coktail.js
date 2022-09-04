@@ -138,4 +138,3 @@ const displayModal = cocktail => {
     <p>${cocktail[0].idDrink}</p>
     `
 }
-
