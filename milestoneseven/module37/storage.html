@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="name-field">
+    <input type="text" name="" id="mark-field">
+    <button id="add-name-btn" onclick="addProduct()">Add student</button>
+
+    <div id="data-container"></div>
+
+
+
+    <script>
+
+        //set input field
+        const getInputField = (id) => {
+            const inputField = document.getElementById(id)
+            const inputFieldValue = inputField.value;
+            return inputFieldValue;
+        }
+
+        //add product
+        const addProduct = () => {
+            const name = getInputField('name-field')
+            const mark = getInputField('mark-field')
+
+
+            displayData(name, mark);
+            savedToLocal(name, mark)
+        }
+
+        //get cart
+        const getCart = () => {
+            const savedCart = localStorage.getItem('cart');
+            let cart = {};
+            if (savedCart) {
+                cart = JSON.parse(savedCart)
+            }
+            return cart;
+        }
+
+        const savedToLocal = (name, mark) => {
+            const cart = getCart();
+            cart[name] = mark;
+            const cartString = JSON.stringify(cart)
+            localStorage.setItem('cart', cartString)
+        }
+
+
+        const displayData = (name, mark) => {
+            const dataContainer = document.getElementById('data-container');
+            const li = document.createElement('li')
+            li.innerHTML = `
+       ${name} : ${mark}
+       `;
+            dataContainer.appendChild(li)
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
