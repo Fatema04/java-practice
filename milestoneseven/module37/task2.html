@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="number">00</p>
+
+    <button id="btn">Add</button>
+    <br>
+    <br>
+
+    <section>
+        <input type="text" placeholder="name" id="name-field">
+        <button id="add-name-btn">Save</button>
+        <button id="del-name-btn">Delete</button>
+
+        <br>
+        <br>
+
+        <!-- 2 -->
+
+        <input type="text" placeholder="email" id="email-field">
+        <button id="add-email-btn">Save</button>
+        <button id="del-email-btn">Delete</button>
+
+        <br>
+        <br>
+        <!-- 3 -->
+
+        <input type="text" placeholder="message" id="msg-field">
+        <button id="add-msg-btn">Save</button>
+        <button id="del-msg-btn">Delete</button>
+
+        <br>
+        <br>
+
+        <!-- reset -->
+
+        <button id="rst">Reset</button>
+        <button onclick="addInfo()">Add All</button>
+
+
+        <script>
+            const previous = document.getElementById('number')
+            const text = previous.innerText;
+            let integer = parseInt(text);
+            document.getElementById('btn').addEventListener('click', function () {
+                integer = integer + 1;
+                previous.innerText = integer;
+                localStorage.setItem('num', integer)
+            })
+
+
+            //set input field
+            const getInputField = (id) => {
+                const inputField = document.getElementById(id)
+                const inputFieldValue = inputField.value;
+                inputField.value = '';
+                return inputFieldValue;
+            }
+
+            // add name
+            document.getElementById('add-name-btn').addEventListener('click', function () {
+                const addName = getInputField('name-field')
+                localStorage.setItem('name', addName)
+            })
+            // delete name
+            document.getElementById('del-name-btn').addEventListener('click', function () {
+
+                localStorage.removeItem('name')
+            })
+
+            //add email 
+
+            document.getElementById('add-email-btn').addEventListener('click', function () {
+                const addEmail = getInputField('email-field')
+                localStorage.setItem('email', addEmail)
+            })
+            // delete email
+            document.getElementById('del-email-btn').addEventListener('click', function () {
+
+                localStorage.removeItem('email')
+            })
+
+            //add message
+
+            document.getElementById('add-msg-btn').addEventListener('click', function () {
+                const addMsg = getInputField('msg-field')
+                localStorage.setItem('message', addMsg)
+            })
+
+            //delete message
+
+            document.getElementById('del-msg-btn').addEventListener('click', function () {
+
+                localStorage.removeItem('message')
+            })
+
+            //reset
+            document.getElementById('rst').addEventListener('click', function () {
+
+                localStorage.clear()
+            })
+
+            //add as object
+
+            const addInfo = () => {
+                const name = getInputField('name-field')
+                const email = getInputField('email-field')
+                const message = getInputField('msg-field')
+
+                // getInfo(name, email, message)
+                savedToLocal(name, email, message)
+            }
+
+
+
+
+            //save to local as array
+            const savedToLocal = (name, email, message) => {
+
+                const newInfo = {
+                    name, email, message
+                }
+
+
+                const oldValue = localStorage.getItem('information')
+                if (oldValue) {
+                    const oldInfo = JSON.parse(oldValue)
+                    const updatedInfo = [...oldInfo, newInfo];
+                    localStorage.setItem('information', JSON.stringify(updatedInfo))
+                }
+                else {
+                    localStorage.setItem('information', JSON.stringify([newInfo]))
+                }
+
+                // const information = getInfo();
+
+                // information['name'] = name;
+                // information['email'] = email;
+                // information['message'] = message;
+
+
+                // const informationString = JSON.stringify(information)
+                // localStorage.setItem('information', informationString)
+
+            }
+
+        //  for single object 
+
+        // const getInfo = () => {
+        //         const savedInfo = localStorage.getItem('information');
+        //         let information = {};
+        //         if (savedInfo) {
+        //             information = JSON.parse(savedInfo)
+        //         }
+        //         return information;}
+
+
+
+
+        </script>
+</body>
+
+</html>
