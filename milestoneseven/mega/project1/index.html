@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/ecd947693a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- nav s -->
+    <div class="navbar bg-red-700">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+
+                <ul class="hidden lg:flex">
+                    <!-- 1 -->
+                    <li class="mr-10">
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <span class="text-rose-100">Home</span>
+
+                    </li>
+                    <!-- 2 -->
+                    <li class="mr-10">
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <span>Wishlist</span>
+
+                    </li>
+                    <!-- 3 -->
+                    <li class="mr-10">
+                        <span><i class="fa-sharp fa-solid fa-trash"></i></span>
+                        <span>Trush</span>
+
+                    </li>
+                    <!-- 4 -->
+                    <li class="mr-10 relative">
+                        <span class="absolute right-2 bottom-3">
+                            <div class="badge badge-secondary">+99</div>
+                        </span>
+                        <span>
+                            <label for="my-drawer-4" class="drawer-button"><i
+                                    class="fa-solid fa-cart-shopping"></i></label>
+
+                        </span>
+
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <span class="block lg:hidden"><i class="fa-sharp fa-solid fa-bars"></i></span>
+                    </div>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 lg:hidden">
+                    <!-- li 1 -->
+                    <li>
+                        <a class="">
+                            <span><i class="fa-solid fa-house"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <!-- li 2 -->
+                    <li>
+                        <a>
+                            <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                            <span>Wishlist</span>
+                        </a>
+                    </li>
+                    <!-- li 3 -->
+                    <li><a> <span><i class="fa-sharp fa-solid fa-trash"></i></span>
+                            <span>Trush</span></a></li>
+                    <!-- li4 -->
+                    <li><a>
+                            <span>
+                                <label for="my-drawer-4" class="drawer-button"><i
+                                        class="fa-solid fa-cart-shopping"></i></label>
+
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- nav e -->
+    <!-- drawer s -->
+    \<div class="drawer drawer-end container mx-auto">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content here -->
+
+            <!-- card s-->
+            <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- card 1 -->
+                <div class="card w-80 bg-base-100 shadow-xl mb-19">
+                    <div class="">
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Shoes!</h2>
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <span><i class="fa-solid fa-square-minus"></i></span>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card w-80 bg-base-100 shadow-xl mb-19">
+                    <div class="">
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Shoes!</h2>
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <span><i class="fa-solid fa-square-minus"></i></span>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card w-80 bg-base-100 shadow-xl mb-19">
+                    <div class="">
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Shoes!</h2>
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <span><i class="fa-solid fa-square-minus"></i></span>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
+
+                            <!-- <button class="btn btn-primary">Details</button> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  e  -->
+
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer-4" class="drawer-overlay"></label>
+            <ul class="menu p-4 overflow-hidden w-80 bg-base-100 text-base-content">
+                <!-- Sidebar content here -->
+                <li><a>Sidebar Item 1</a></li>
+                <li><a>Sidebar Item 2</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- drawer e -->
+    <!-- modal -->
+    <!-- The button to open modal -->
+
+    <!-- Put this part before </body> tag -->
+    <input type="checkbox" id="my-modal" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <img src="book.png" class="w-full h-70" alt="">
+            <div class="modal-action">
+                <label for="my-modal" class="btn">Yay!</label>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
