@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- nav s -->
+    <!-- nav start -->
     <div class="navbar bg-red-700">
         <div class="flex-1">
             <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -20,26 +20,49 @@
         <div class="flex-none">
             <div class="dropdown dropdown-end">
 
-                <ul class="hidden lg:flex">
-                    <!-- 1 -->
+                <ul class="hidden lg:flex text-white">
+                    <!-- home -->
                     <li class="mr-10">
                         <span><i class="fa-solid fa-house"></i></span>
-                        <span class="text-rose-100">Home</span>
+                        <span class="text-white">Home</span>
 
                     </li>
-                    <!-- 2 -->
+
+
+                    <!-- wish list 2 -->
                     <li class="mr-10">
                         <span><i class="fa-sharp fa-solid fa-heart"></i></span>
-                        <span>Wishlist</span>
+                        <label for="my-modal-3">Wishlist</label>
+                        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                        <div class="modal">
+                            <div class="modal-box relative">
+                                <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                <div id="wish">
 
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <!-- 3 -->
+
+
+                    <!--trash 3 -->
                     <li class="mr-10">
                         <span><i class="fa-sharp fa-solid fa-trash"></i></span>
-                        <span>Trush</span>
+                        <label for="my-modal-4">Trush</label>
+                        <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+                        <div class="modal">
+                            <div class="modal-box relative">
+                                <label for="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+                                <div id="trush">
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
                     </li>
-                    <!-- 4 -->
+                    <!-- cart 4 -->
                     <li class="mr-10 relative">
                         <span class="absolute right-2 bottom-3">
                             <div class="badge badge-secondary">+99</div>
@@ -101,90 +124,55 @@
         <div class="drawer-content">
             <!-- Page content here -->
 
-            <!-- card s-->
-            <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <!-- card 1 -->
-                <div class="card w-80 bg-base-100 shadow-xl mb-19">
-                    <div class="">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    </div>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
-                        <span><i class="fa-solid fa-square-minus"></i></span>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
-                        </div>
-                    </div>
-                </div>
-                <!-- card 2 -->
-                <div class="card w-80 bg-base-100 shadow-xl mb-19">
-                    <div class="">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    </div>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
-                        <span><i class="fa-solid fa-square-minus"></i></span>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
-                        </div>
-                    </div>
-                </div>
-                <!-- card 3 -->
-                <div class="card w-80 bg-base-100 shadow-xl mb-19">
-                    <div class="">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    </div>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
-                        <span><i class="fa-solid fa-square-minus"></i></span>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                            <label for="my-modal" class="btn btn-primary modal-button">Details</label>
+            <!-- card start-->
+            <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                id="card-container">
 
-                            <!-- <button class="btn btn-primary">Details</button> -->
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
-            <!--  e  -->
+            <!-- cart end  -->
 
         </div>
         <div class="drawer-side">
             <label for="my-drawer-4" class="drawer-overlay"></label>
             <ul class="menu p-4 overflow-hidden w-80 bg-base-100 text-base-content">
                 <!-- Sidebar content here -->
-                <li><a>Sidebar Item 1</a></li>
-                <li><a>Sidebar Item 2</a></li>
+                <div id="cart-div">
+
+                </div>
+                <button class="btn btn-secondary" id="clear" onclick="clear()">Clear
+                    all</button>
+                <div class="bg-primary text-white h-20">
+                    <h1>Price : <span id="price">00</span></h1>
+                </div>
+
             </ul>
+
         </div>
+        <!-- calculate -->
 
     </div>
 
-    <!-- drawer e -->
-    <!-- modal -->
+
+    <!-- drawer end -->
+
+
+    <!-- modal start -->
     <!-- The button to open modal -->
 
-    <!-- Put this part before </body> tag -->
+
+    <label for="my-modal-3" class="btn modal-button"></label>
     <input type="checkbox" id="my-modal" class="modal-toggle" />
     <div class="modal">
-        <div class="modal-box">
-            <img src="book.png" class="w-full h-70" alt="">
-            <div class="modal-action">
-                <label for="my-modal" class="btn">Yay!</label>
+        <div class="modal-box relative">
+            <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <div id="md">
+
             </div>
         </div>
     </div>
-
+    <script src="app.js"></script>
 </body>
 
 </html>

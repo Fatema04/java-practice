@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar bg-red-700">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+
+                <ul class="hidden lg:flex text-white">
+                    <!-- 1 -->
+                    <li class="mr-10">
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <span class="text-white">Home</span>
+
+                    </li>
+                    <!-- 2 -->
+                    <li class="mr-10">
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <span>Wishlist</span>
+
+                    </li>
+                    <!-- 3 -->
+                    <li class="mr-10">
+                        <span><i class="fa-sharp fa-solid fa-trash"></i></span>
+                        <span>Trush</span>
+
+                    </li>
+                    <!-- 4 -->
+                    <li class="mr-10 relative">
+                        <span class="absolute right-2 bottom-3">
+                            <div class="badge badge-secondary">+99</div>
+                        </span>
+                        <span>
+                            <label for="my-drawer-4" class="drawer-button"><i
+                                    class="fa-solid fa-cart-shopping"></i></label>
+
+                        </span>
+
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <span class="block lg:hidden"><i class="fa-sharp fa-solid fa-bars"></i></span>
+                    </div>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 lg:hidden">
+                    <!-- li 1 -->
+                    <li>
+                        <a class="">
+                            <span><i class="fa-solid fa-house"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <!-- li 2 -->
+                    <li>
+                        <a>
+                            <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                            <span id="wish">Wishlist</span>
+                        </a>
+                    </li>
+                    <!-- li 3 -->
+                    <li><a> <span><i class="fa-sharp fa-solid fa-trash"></i></span>
+                            <span>Trush</span></a></li>
+                    <!-- li4 -->
+                    <li><a>
+                            <span>
+                                <label for="my-drawer-4" class="drawer-button"><i
+                                        class="fa-solid fa-cart-shopping"></i></label>
+
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wishes" style="width: 400px;height:300px;"></div>
+</body>
+
+</html>
